@@ -1,0 +1,254 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="author" content="Юлия Лебедева">
+    <meta name="description" content="тестовая страница">
+    <meta name="keywords" content="тест,проверка,html">
+
+<!--title что будет написано на вкладке -->
+    <title>Главная страница</title>
+
+    <!-- подключение css файла - обязательно
+  в шапке
+<link rel="stylesheet" href="css/main.css>-->
+
+</head>
+ <body>
+   <!--Тэги для описания секций, для последующего
+ оформления. Сами по себе начинают надписи с новой строки -->
+<header>Шапка</header>
+<main>Основная часть сайта</main>
+<aside>Боковая часть сайта</aside>
+<footer>Футор</footer>
+
+<!--фраза "загружено на 9% будет видна в случае,
+если браузер не подгружает сам прогресс бар" -->
+<br><br><br><br><progress max="100" value="9">
+  Загружено на 9%
+</progress>
+
+<!--Кнопка со стрелкой и выпадающим тестом при нажатии -->
+<details>
+  <summary>Подробнее</summary>
+  Если убрать все атрибуты будет выпадающий список,
+   где можно выбрать 1 строку, атрибут multiple - чтобы
+  можно было выбрать несколько строк
+</details>
+
+<!--Если убрать все атрибуты будет выпадающий список,
+ где можно выбрать 1 строку, атрибут multiple - чтобы
+можно было выбрать несколько строк, selected - та,
+которая будет отображаться изначально при перезагрузке
+страницы, disabled - та, которую нельзя выбрать-->
+<br><br><br><br><form>
+<select multiple size="4">
+<option disabled selected>-----</option>
+<option selected>bmw</option>
+<option selected>audi</option>
+<option>mersedes</option>
+</select>
+</form>
+
+   <!--для textarea нет атрибута value, в отличие от
+ input, если надо в поле сделать текст, который пользователь
+сам удаляет - пишем его просто между тегами -->
+<br><br><br><br><form>
+  <textarea placeholder="Введите что-то">Просто текст</textarea>
+<br><br>
+
+<button type="reset">Готово</button>
+</form>
+   <!--action ссылка на страницу, которая будет обрабатывать
+ инфу из формы
+placeholder надпись, которая исчезает, как только
+щелкаешь по полю курсором
+value надпись, которую надо удалить вручную, чтобы
+написать что-то в поле
+name для последующей работы с js
+id для последующей работы с css -->
+   <form action="index.html" method="post">
+     <br><br><br><br><label for="user_name">Введите имя</label>
+     <input type="text" placeholder="введите что-то"
+      value="что-то" maxlength="5" name="user_name"
+      id="user_name"><br><br>
+
+      <input type="password" placeholder="password"><br><br>
+      <input type="email" placeholder="email"><br><br>
+      <input type="color"><br><br>
+      <input type="date"><br><br>
+      <input type="time"><br><br>
+      <input type="checkbox"><br><br>
+      <input type="file"><br><br>
+      <input type="reset" value="Очистить"><br><br>
+      <input type="button"><br><br>
+      <!--submit страница обновляется
+    и все данные из формы отправляются куда надо -->
+      <input type="submit" value="Отправить"><br><br>
+      <!--один и тот же name указываем, чтобы
+    при выборе одного кружочка снималось выделение
+  со второго. Если name убрать - можно выбрать
+сразу оба кружочка -->
+      <input type="radio" name="state">
+      <input type="radio" name="state"><br><br>
+   </form>
+
+
+
+
+   <!--div для разделения текста на блоки
+   span когда в одной строке кусочек текста надо
+   обернуть для добавления какого-то стиля в css -->
+   <br><br><br><br><div>Просто текст</div>
+   <div>Просто текст</div>
+
+
+   <span>просто тест</span>
+   <span>просто текст</span>
+
+
+
+
+   <!--подключение js файла. желательно прописывать
+ в конце перед закрывающим тегом body.
+либо через атрибут src подключаем файл указывая ссылку
+либо путь// либо прописываем функцию вручную через
+function внутри тега script-->
+<script src="">
+
+</script>
+
+
+ <!--таблица tr для рядов th(жирный) и td для столбцов (прописываем
+   внутри рядов) -->
+
+<br><br><br><br><table border="3" width="300px">
+  <thead>
+    <tr>
+      <th>Имя</th>
+      <th>Фамилия</th>
+    </tr>
+  </thead>
+  <tbody align="center">
+      <tr>
+        <td>John</td>
+        <td>Dale</td>
+      </tr>
+      <tr>
+        <td>John2</td>
+        <td>Dale2</td>
+      </tr>
+      <tr>
+        <td>John3</td>
+        <td>Dale3</td>
+      </tr>
+      <tr>
+        <td>John4</td>
+        <td>Dale4</td>
+      </tr>
+  </tbody>
+  <tfoot>
+<tr>
+        <td>Last</td>
+        <td>One</td>
+</tr>
+  </tfoot>
+</table>
+
+   <!--изображения src если из инета, вставляем ссылку картинки
+ если с устройства, добавляем картинку в проект и прописываем
+путь+название как на устройстве, alt слово, которое будет,
+если картинка не загрузилась -->
+<br><br><br><br><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHCBUVFBgUFRUZGBgYGxsaGxobGx0aHRobGxoaHRoaGxsgIC0kGx0pIBoaJTcmKS4yNDQ0ICM5PzkyPi0yNDABCwsLEA8QHhISHjIpJCk2NTIyMjUyMjIyMjUyMjQyMjIyMjIyMjIyMjI1MjIyMjIyMjIyMjIyMjIyMjIyMjIyMv/AABEIALcBEwMBIgACEQEDEQH/xAAbAAABBQEBAAAAAAAAAAAAAAADAAECBAUGB//EADwQAAIBAwIEBAQEBQMEAgMAAAECEQADIRIxBEFRYQUicYETMpGhQrHB8AYUUtHhI3LxFUNikqLCFjOC/8QAGgEAAwEBAQEAAAAAAAAAAAAAAAECAwQFBv/EACsRAAICAQQCAQIGAwEAAAAAAAABAhEDEiExQQRRExRhInGBocHRMrHwkf/aAAwDAQACEQMRAD8AnFKKnppRXccgOlUiKgadCHpTUCagXp0Kw804NV9dOHpaQ1FiaaaDqpaqNI7CzTzQgacNRQWFBp5oWqlNFBYQmkDUQ1KaVDskTTTUaVOhWSmm1U1KigsaaeaaKWmgCU0iaYLTgUhjUqnFKKQEKVTApRRYyFKpUpoAVKKcU8UgIEUoqemm00WBGKai0qLHRYThLhEhTQrloqYIiuuUHoKHctA7gVn8heg5AioFa2PEfDoOpB7Cssr1raMrMpKgLJUdNGK0ilVZFAdNIJRdNNposKIaKWiirHMU7KOVFhQLRT6DRNNNqosdEINKDU9VLVSGQE0+alqFStKWIVRJJgCgCAp+1dR4Z/DBaGvGBvpXc9i3L2rp7fCW1AVEVQu0DP1396xllS4NI42+TzCKQWux8V8DtsSbY0sZJMkjnsPWuY4vhHtmHWJ2PI+h51UcikKUHErAU8VKaLw9hrjBUBZjy/C2/" width= "250px" title="навели на меня" alt="гора">
+
+<br><img src="images/70е.jpg" width="250px" alt="HTML">
+
+
+
+   <!--a ссылки, тег работает только с атрибутами
+target="-blank" чтобы открывалась в новой вкладке
+<a name="bottomOfPage"></a> размещается после той
+строчки, на которую должно перенаправлять  -->
+<br><br><br><br><a href="#bottomOfPage">Вниз</a><br>
+
+
+<a href="https://google.com" target="-blank" title="нажми на меня">перейти в гугл</a><br>
+
+<a href="about.html">Перейти на страницу про нас</a><br>
+
+<a name="bottomOfPage"></a>
+
+<a href="mailto:ylia.lebedeva2012@yandex.ru">Написать на почту</a>
+
+<p title="some">some text</p>
+
+
+
+
+
+
+<!--ol пронумерованный список, start откуда начинается
+нумерация, type цифры, буквы, римские -->
+   <ol start="7" type="I">
+<li>купи молоко</li>
+<li>купи картошку</li>
+<li>купи <b>машину</b></li>
+<li>купи <big>машину</big></li>
+<li>купи машину</li>
+<li>купи машину</li>
+   </ol>
+
+   <!--ul непронумерованный список,
+   type кружочки, квадратики, др стили  -->
+<ul type="circle">
+  <li>купи молоко</li>
+  <li>купи картошку</li>
+  <li>купи машину</li>
+  <li>купи машину</li>
+  <li>купи молоко</li>
+  <li>купи картошку</li>
+</ul>
+
+
+
+
+
+
+
+   <!-- h1,2,3... - заголовки жирный и большой шрифт, атрибут title,
+ чтобы при наведении всплывала подсказка. big для увеличенного
+шрифта, strike для зачеркнутого -->
+   <h1 title="самый первый заголовок">Заголовок1</h1>
+   <h2><strike>Заголовок <big>2</big></strike></h2>
+   <h3>Заголовок3</h3>
+   <h4>Заголовок4</h4>
+   <h5>Заголовок5</h5>
+
+<!--pre для сохранения отступов, как было изначально -->
+<pre>function some() {
+     return "Some"
+}</pre>
+
+<!--code просто для формул -->
+<code>let x = 0</code>
+
+<!--small для мал текста, b для жирного текста,
+em|i для курсива -->
+   <p><small>Просто</small> <b><em>текст</em></b></p>
+   <p><strong><i>Просто текст</i></strong></p>
+
+<!--sub символ ниже строки, sup символ выше строки -->
+<p>H<sub>2</sub>O</p>
+
+<p>a<sup>2</sup></p>
+
+   Hello<br><hr>
+   world
+
+   <abbr title="АшТэЭмЭл">HTML</abbr>
+   <address>
+Minsk, Belarus
+     </address>
+
+   </body>
+</html>
